@@ -48,7 +48,7 @@ function askQuestion(question){
    let a = Math.floor(Math.random()*(9-3+1))+2;
    let b = Math.floor(Math.random()*(9-3+1))+2;
    let product = a * b;
-   let equation = "Question " + question + "  : " + a + " * " + b + " = ?";
+   let equation = "Question " + question + " : " + a + " * " + b + " = ?";
    let answer = prompt(equation);
    if (answer == product) {
     alert("correct!");
