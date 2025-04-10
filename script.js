@@ -51,9 +51,10 @@ function setUp() {
  * @return: {integer} value 
  */
 function changeVar(variable) {
-    let value =3;
+    let value = prompt("Choose your " + variable + "value");
+    value = parseInt();
     return value;
-}
+    }
 
 /* Function askQuestion(question) 
  * Asks a multiplication question: 2 factors between low and high ranges
