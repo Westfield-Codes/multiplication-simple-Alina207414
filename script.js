@@ -63,7 +63,19 @@ function changeVar(variable) {
  * @return: boolean value 
  */
 function askQuestion(question) {
+    let a = Math.floor(Math.random()*(high-low+1))+low;
+    let b = Math.floor(Math.random()*(high-low+1))+low;
+    let product = a * b;
+    let equation = "Question " + question + ": What is " + a + " * " + b + " =?";
+    let answer = prompt(equation);
+    if (answer == product) {
+         alert("Correct!");
     return true;
+    }
+    else {
+        alert("Incorrect");
+        return false;
+    }
 }
 
 /* Function showStats()
@@ -77,7 +89,23 @@ function askQuestion(question) {
  * @return: none
  */
 function showStats(score, questions) {
+    let tables = true;
+    let factor = 0;
+    alert("you got " + score + " out of " + questions + " correct.");
+    let more = "any";
+    if (score == questions) alert("Perfection badge");
+   else {
+    alert("you got " + score + " out of " + questions + " right.")
+}
+    while (tables == true) {
+    let tables = confirm("Do you want study " + more + " tables");
+    if (tables == true) {
+        factor  = prompt("Show table wich factor?");
+        showTable(factor);
+         more = "more";
+        }   
 
+    }
 }
 
 /* Function showTable(factor)
@@ -88,7 +116,7 @@ function showStats(score, questions) {
  * @return: none
  */
 function showTable(factor) {
-
+    
 }
 
 // /* Function showErrors(errors)
