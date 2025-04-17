@@ -8,7 +8,7 @@
  */
 var high = 9;
 var low = 3;
-
+var errors = []
 /* Function main() THIS REPLACES askQuestions(
  * Calls setup to change default values
  * Calls askQuestion with question number argument
@@ -74,6 +74,8 @@ function askQuestion(question) {
     }
     else {
         alert("Incorrect");
+        errors.push(a,b);
+        console.log(errors.toString());
         return false;
     }
 }
